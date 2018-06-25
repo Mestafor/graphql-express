@@ -1,6 +1,17 @@
+require('dotenv').config();
 var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var { buildSchema } = require('graphql');
+
+// DB_HOST=localhost
+// DB_USER=root
+// DB_PASS=s1mpl3
+
+console.log(
+  process.env.DB_HOST,
+  process.env.DB_USER,
+  process.env.DB_PASS
+);
 
 let links = [{
   id: 'link-0',
